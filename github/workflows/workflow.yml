@@ -8,7 +8,9 @@ on:
 
 jobs:
   build:
-    container: python:3.9-slim
+    runs-on: ubuntu-latest  # ✅ required
+    container:              # ✅ container section with image key
+      image: python:3.9-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v3
